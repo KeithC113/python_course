@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} </title>
+</head>
+<body>
+
+    {% extends "base.html" %}
+    {% block content %}
+    <h1>Hello, {{user.username}}</h1>
+    <form method="POST" action="/tasks">
+        <input type="text" name="title" id="title" placeholder="title..."/>
+        <textarea name="description" id="description" rows=6 cols=100></textarea>
+        <input type="submit" value="Create new task">
+    </form>
+    {% for task in tasks %}
+    <div>
+        <p>{{task.title}}: <b>{{task.description}}</b> 
+            {% if task.done %}
+            <span> &#9989; </span>
+            {% else %}
+            <form style="display: inline" method="POST" action="/tasks/{{ task.id}}">
+                <input type="submit" value="mark as complete">
+            </form>
+            {% endif %}
+        </p>
+        {% endfor %}
+    </div>
+    {% endblock %}
+</body>
+</html>

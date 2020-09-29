@@ -1,0 +1,77 @@
+[
+    {
+      "model": "inventory.Artist",
+      "pk": 1,
+      "fields": {
+        "name": "Bucks Fizz"
+      }
+    },
+    {
+      "model": "inventory.Artist",
+      "pk": 2,
+      "fields": {
+        "name": "Robert Palmer"
+      }
+    },
+    {
+      "model": "inventory.Artist",
+      "pk": 3,
+      "fields": {
+        "name": "Led Zepplin"
+      }
+    },
+    {
+      "model": "inventory.Album",
+      "fields": {
+        "title": "Physical Graffiti",
+        "year": 1970,
+        "stock_level": 10,
+        "artist": 3
+      }
+    },
+    {
+      "model": "inventory.Album",
+      "fields": {
+        "title": "Riptide",
+        "year": 1985,
+        "stock_level": 3,
+        "artist": 2
+      }
+    },
+    {
+      "model": "inventory.Album",
+      "fields": {
+        "title": "The Land of Make Believe",
+        "year": 1981,
+        "stock_level": 3,
+        "artist": 1
+      }
+    },
+    {
+        "model": "inventory.Album",
+        "fields": {
+          "title": "Clues",
+          "year": 1980,
+          "stock_level": 3,
+          "artist": 2
+        }
+      },
+      {
+        "model": "inventory.Album",
+        "fields": {
+          "title": "Led Zepplin IV",
+          "year": 1971,
+          "stock_level": 3,
+          "artist": 3
+        }
+      },
+      {
+        "model": "inventory.Album",
+        "fields": {
+          "title": "Double Fun",
+          "year": 1971,
+          "stock_level": 3,
+          "artist": 3
+        }
+      }
+  ]
